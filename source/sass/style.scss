@@ -1,3 +1,14 @@
-h1 {
-  color: red;
-}
+@import "fonts.scss";
+@import "normalize.scss";
+@import "common.scss";
+@import "mixins.scss";
+@import "variables.scss";
+@import "blocks/button.scss";
+@import "blocks/header.scss";
+@import "blocks/footer.scss";
+@import "blocks/title.scss";
+@import "blocks/logo.scss";
+@import "blocks/order.scss";
+@import "blocks/socials.scss";
+@import "blocks/sections.scss";
+@import "blocks/address.scss";

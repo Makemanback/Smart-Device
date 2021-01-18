@@ -1,0 +1,159 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('../../img/header-background.png');
+    color: $white;
+    overflow: hidden;
+}
+
+.header__container {
+  display: flex;
+  flex-direction: column;
+  min-width: 100%;
+
+  @media (min-width: $desktop-width) {
+    overflow: hidden;
+    min-width: unset;
+    max-width: 100%;
+  }
+}
+
+.header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 48px;
+    margin-right: 14px;
+    margin-left: 14px;
+    padding-top: 17px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 42px;
+      margin-right: 25px;
+      margin-left: 25px;
+      padding-top: 20px;
+    }
+
+    @media (min-width: $desktop-width) {
+        max-width: 1411px;
+        margin-right: 10px;
+        margin-left: 10px;
+        padding-top: 33px;
+        margin-bottom: 176px;
+    }
+}
+
+.header__logo-wrapper {
+    display: flex;
+}
+
+.header__title-container {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: block;
+      margin-top: 6px;
+    }
+}
+
+.header__contacts-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.header__mail {
+    display: none;
+
+    @media (min-width: $desktop-width) {
+      display: block;
+      margin-right: 88px;
+      font-weight: 400;
+      color: $white;
+    }
+}
+
+.header__mail-icon {
+  margin-right: 23px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 33px;
+  }
+
+  @media (min-width: $desktop-width) {
+      width: 19px;
+      height: 14px;
+      margin-right: 20px;
+    }
+}
+
+.header__phone {
+    display: none;
+
+    @media (min-width: $desktop-width) {
+      display: block;
+      width: 184px;
+      margin-right: 38px;
+      font-weight: 400;
+      color: $white;
+    }
+}
+
+.header__phone-icon {
+    margin-right: 16px;
+
+    @media (min-width: $desktop-width) {
+      widows: 18px;
+      height: 18px;
+    }
+}
+
+.header__phone-button {
+    display: none;
+
+    @media (min-width: $desktop-width) {
+      display: block;
+      width: 180px;
+      border-color: $white;
+    }
+}
+
+.header__order-wrapper {
+  position: relative;
+  display: flex;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 70px;
+
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 163px;
+    overflow: hidden;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1494px;
+    margin-bottom: 108px;
+  }
+}
+
+.header__order-wrapper img {
+  position: absolute;
+  left: 17px;
+  z-index: 1;
+  width: 301px;
+  height: 220px;
+
+  @media (min-width: $tablet-width) {
+    left: 55%;
+    width: 465px;
+    height: 340px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: static;
+    min-width: 705px;
+    height: 515px;
+    top: 0;
+    right: 5%;
+  }
+}

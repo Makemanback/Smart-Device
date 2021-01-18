@@ -1,0 +1,16 @@
+.address {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $desktop-width) {
+    width: 333px;
+  }
+}
+
+.address__phone {
+  color: $footer;
+}
+
+.address h3 {
+  margin: 0;
+}

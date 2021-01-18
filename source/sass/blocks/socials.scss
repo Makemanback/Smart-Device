@@ -1,0 +1,8 @@
+
+.socials__list {
+  @include list-reset;
+
+  display: flex;
+  justify-content: space-between;
+  width: 112px;
+}

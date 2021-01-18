@@ -1,0 +1,29 @@
+.sections {
+  display: flex;
+  flex-direction: column;
+}
+
+.sections__list {
+  @include list-reset;
+
+  display: flex;
+
+
+  @media (min-width: $desktop-width) {
+    flex-wrap: wrap;
+  }
+}
+
+.sections__list-item {
+
+  @media (min-width: $desktop-width) {
+    width: 243px;
+  }
+}
+.sections__link {
+  color: $footer;
+
+  font-size: 15px;
+  line-height: 25px;
+}
+
