@@ -1,7 +1,7 @@
 .footer {
+  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
 
   color: $footer;
 
@@ -10,16 +10,43 @@
   }
 
   @media (min-width: $desktop-width) {
+    &::after {
+      position: absolute;
+      top: 265px;
+      width: 100%;
+      height: 1px;
+      content: "";
+      background-color: #626962;
+      opacity: 0.2;
+    }
+  }
+}
 
+.footer__container {
+  position: relative;
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+    max-width: 1412px;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 
 .footer__info-wrapper {
+  display: flex;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: 1023px) {
+    flex-wrap: wrap;
+    border-bottom: 1px solid rgba(98, 105, 98, 0.2);
+  }
 
   @media (min-width: $desktop-width) {
-    display: flex;
     justify-content: space-between;
-    max-height: 145px;
     margin-top: 65px;
     margin-bottom: 55px;
     margin-right: 10px;
@@ -30,14 +57,29 @@
 .footer__title-container {
   display: flex;
 
+  @media (max-width: 767px) {
+    margin-bottom: 83px;
+  }
+
   @media (min-width: $desktop-width) {
     margin-bottom: 54px;
+  }
+}
+
+.footer__title-container span {
+  color: #788891;
+}
+
+.footer__socials {
+  @media (max-width: 767px) {
+    margin-bottom: 55px;
   }
 }
 
 .footer h3 {
   margin: 0;
   margin-bottom: 33px;
+  margin-top: 29px;
 
   font-family: "Roboto Condensed", "Roboto", sans-serif;
   font-size: 15px;
@@ -46,6 +88,59 @@
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
+    margin-top: 0;
     margin-bottom: 29px;
+  }
+}
+
+.footer__service-info {
+
+  @media (min-width: $tablet-width) {
+    height: 69px;
+    margin-right: 27px;
+    margin-left: 27px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 52px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}
+
+.footer__contacts {
+  display: flex;
+  border-bottom: 1px solid rgba(98, 105, 98, 0.2);
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 46px;
+
+  }
+
+  @media (min-width: $tablet-width) and (max-width: 1023px) {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 97px;
+    align-items: center;
+    padding-right: 25px;
+    padding-left: 25px;
+
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    border-bottom: none;
+  }
+}
+
+.footer__sections,
+.footer__address {
+  @media (max-width: 767px) {
+    padding-right: 15px;
+    padding-left: 15px;
+    border-bottom: 1px solid rgba(98, 105, 98, 0.2);
   }
 }

@@ -1,16 +1,45 @@
 .address {
+  position: relative;
   display: flex;
   flex-direction: column;
 
-  @media (min-width: $desktop-width) {
-    width: 333px;
+  @media (min-width: $tablet-width) and (max-width: 1023px) {
+    margin-top: 38px;
+    margin-right: 37px;
+    margin-left: auto;
+  }
+}
+
+.address__block {
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 767px) {
+    margin-bottom: 23px;
   }
 }
 
 .address__phone {
   color: $footer;
+  opacity: 0.5;
+  font-size: 15px;
+  line-height: 25px;
 }
 
 .address h3 {
   margin: 0;
+  margin-bottom: 29px;
+
+  @media (max-width: 767px) {
+    margin-top: 29px;
+  }
+}
+
+.address span {
+  opacity: 0.5;
+}
+
+.address__button {
+  top: 27px;
+  right: 17px;
 }
