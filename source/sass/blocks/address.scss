@@ -24,6 +24,15 @@
   opacity: 0.5;
   font-size: 15px;
   line-height: 25px;
+
+  &:hover {
+    color: $blue;
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
 }
 
 .address h3 {
@@ -42,4 +51,8 @@
 .address__button {
   top: 27px;
   right: 17px;
+}
+
+.address__button svg {
+  fill: #c4c4c4;
 }

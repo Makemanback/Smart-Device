@@ -22,7 +22,7 @@
   text-transform: uppercase;
   letter-spacing: 3px;
 
-  @media  (min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     width: 470px;
     margin-top: 58px;
     margin-bottom: 32px;
@@ -85,6 +85,15 @@
   font-size: 16px;
   background-color: $blue;
   border-color: $blue;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 1;
+  }
 
   @media (min-width: $tablet-width) {
     width: 379px;

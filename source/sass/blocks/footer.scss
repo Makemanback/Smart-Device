@@ -4,10 +4,7 @@
   flex-direction: column;
 
   color: $footer;
-
-  @media (min-width: $tablet-width) {
-
-  }
+  overflow: hidden;
 
   @media (min-width: $desktop-width) {
     &::after {
@@ -94,7 +91,6 @@
 }
 
 .footer__service-info {
-
   @media (min-width: $tablet-width) {
     height: 69px;
     margin-right: 27px;
@@ -116,7 +112,6 @@
     flex-direction: column;
     align-items: center;
     margin-top: 46px;
-
   }
 
   @media (min-width: $tablet-width) and (max-width: 1023px) {
@@ -127,7 +122,6 @@
     align-items: center;
     padding-right: 25px;
     padding-left: 25px;
-
   }
 
   @media (min-width: $desktop-width) {

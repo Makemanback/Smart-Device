@@ -1,10 +1,18 @@
 .logo {
-    margin-right: 16px;
+  margin-right: 16px;
 }
 
 .logo__link svg {
   @media (min-width: $tablet-width) {
     width: 52px;
     height: 52px;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 1;
+    }
   }
 }

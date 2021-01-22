@@ -1,0 +1,79 @@
+.feedback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: $blue;
+  overflow-x: hidden;
+}
+
+.feedback__container {
+  display: flex;
+  flex-direction: column;
+  margin-right: 15px;
+  margin-left: 15px;
+  margin-top: 33px;
+  margin-bottom: 41px;
+
+  color: $white;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 75px;
+    margin-left: 75px;
+    margin-bottom: 103px;
+  }
+
+  @media (min-width: $desktop-width) {
+    align-items: flex-end;
+    min-width: 1024px;
+    width: 100%;
+    max-width: 1200px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 113px;
+    background-image: url("../../img/feedback-plane.png");
+    background-size: 511px 288px;
+    background-repeat: no-repeat;
+    background-position: 0 center;
+  }
+}
+
+.feedback__container h3 {
+  margin: 0;
+  margin-bottom: 20px;
+
+  font-family: "Roboto Condensed", "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 40px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 7px;
+
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 29px;
+    font-size: 36px;
+    line-height: 51px;
+  }
+}
+
+.feedback__container p {
+  margin: 0;
+  margin-bottom: 30px;
+
+  line-height: 22px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 252px;
+  }
+}

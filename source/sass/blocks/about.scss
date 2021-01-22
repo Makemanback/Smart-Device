@@ -1,0 +1,80 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about__container {
+  display: flex;
+  flex-direction: column;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-bottom: 65px;
+
+  color: $grey;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 25px;
+    padding-left: 210px;
+    margin-bottom: 83px;
+
+    background-image: url("../../img/2005.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  @media (min-width: $tablet-width) {
+    max-width: 1200px;
+
+    margin-bottom: 110px;
+  }
+}
+
+.about__container h2 {
+  margin: 0;
+  margin-bottom: 19px;
+
+  font-family: "Roboto Condensed", "Roboto", sans-serif;
+  font-size: 28px;
+  line-height: 40px;
+  font-weight: 400;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 23px;
+
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 18px;
+
+    font-size: 36px;
+    line-height: 51px;
+  }
+}
+
+.about__container p {
+  margin: 0;
+  margin-bottom: 35px;
+
+  line-height: 21px;
+}
+
+.about__button {
+  width: 180px;
+  border: 1px solid $blue;
+
+  color: $blue;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:hover {
+    color: $white;
+    background-color: $blue;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}

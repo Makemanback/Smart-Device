@@ -1,0 +1,171 @@
+.form {
+  position: relative;
+  overflow: hidden;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    width: 590px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 570px;
+  }
+}
+
+.form input {
+  width: 290px;
+  height: 52px;
+  margin-bottom: 30px;
+  padding: 15px 17px;
+
+  border: none;
+  color: $white;
+  background-color: #19baff;
+
+  &::placeholder {
+    color: $white;
+  }
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:active {
+    background-color: #19baff;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 280px;
+    margin-bottom: 42px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 270px;
+  }
+}
+
+.form textarea {
+  width: 290px;
+  height: 104px;
+  margin-bottom: 30px;
+  padding: 13px 17px;
+  border: none;
+  background-color: #19baff;
+  resize: none;
+
+  &::placeholder {
+    color: $white;
+  }
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:active {
+    background-color: #19baff;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 590px;
+    height: 160px;
+    margin-bottom: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 570px;
+  }
+}
+
+.form__button {
+  width: 290px;
+  height: 47px;
+  margin-bottom: 30px;
+  border: none;
+  background-color: #19baff;
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:active {
+    background-color: #19baff;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+}
+
+.form__label {
+  margin-bottom: 0;
+
+  @media (min-width: $tablet-width) {
+    align-self: center;
+  }
+}
+
+.form__label-text {
+  display: block;
+  padding-left: 33px;
+  font-size: 14px;
+  line-height: 16px;
+
+  @media (min-width: $tablet-width) {
+    width: 238px;
+  }
+}
+
+.form__checkbox input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+
+  &:checked + .form__check-box {
+    background-image: url("../../img/icon-checkbox.svg");
+    background-repeat: no-repeat;
+    background-position: 2px 3px;
+    background-size: 12px;
+  }
+
+  &:hover + .form__check-box {
+    opacity: 0.7;
+  }
+
+  &:active + .form__check-box {
+    opacity: 1;
+  }
+
+  &:focus + .form__check-box {
+    outline: auto 5px -webkit-focus-ring-color;
+  }
+}
+
+.form__check-box {
+  position: absolute;
+  display: block;
+  width: 17px;
+  height: 16px;
+
+  background-color: $blue;
+  border: 1px solid $white;
+
+  cursor: pointer;
+}
+
+.form__label-text--modal {
+  @media (min-width: $tablet-width) {
+    width: 337px;
+  }
+}

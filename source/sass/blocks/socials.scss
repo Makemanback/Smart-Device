@@ -6,3 +6,15 @@
   justify-content: space-between;
   width: 113px;
 }
+
+.socials__image {
+  fill: #cdcdcd;
+
+  &:hover {
+    fill: $blue;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}

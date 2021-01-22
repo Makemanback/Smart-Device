@@ -25,7 +25,7 @@
   }
 
   @media (max-width: 1023px) {
-      flex-direction: column;
+    flex-direction: column;
   }
 }
 
@@ -47,11 +47,22 @@
   opacity: 0.5;
   font-size: 15px;
   line-height: 25px;
+
+  &:hover {
+    color: $blue;
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
 }
-
-
 
 .sections__button {
   top: 27px;
   right: 17px;
+}
+
+.sections__button svg {
+  fill: #c4c4c4;
 }
