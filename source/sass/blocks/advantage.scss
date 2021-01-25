@@ -35,7 +35,7 @@
     border-color: $blue;
     background-color: $blue;
 
-    h3,
+    h2,
     p {
       color: $white;
     }
@@ -46,10 +46,10 @@
   }
 }
 
-.advantage h3 {
+.advantage h2 {
   margin: 0;
   margin-bottom: 16px;
-  font-family: "Roboto Condensed", "Roboto", sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-size: 20px;
   line-height: 28px;
   font-weight: 400;

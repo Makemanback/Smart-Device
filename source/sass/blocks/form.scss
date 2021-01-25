@@ -102,6 +102,7 @@
 }
 
 .form__label {
+  position: relative;
   margin-bottom: 0;
 
   @media (min-width: $tablet-width) {
@@ -110,17 +111,32 @@
 }
 
 .form__label-text {
+  position: relative;
   display: block;
   padding-left: 33px;
   font-size: 14px;
   line-height: 16px;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    content: "";
+    width: 17px;
+    height: 16px;
+
+    background-color: $blue;
+    border: 1px solid $white;
+    cursor: pointer;
+  }
 
   @media (min-width: $tablet-width) {
     width: 238px;
   }
 }
 
-.form__checkbox input {
+.form__label input {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -132,36 +148,25 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 
-  &:checked + .form__check-box {
+
+  &:checked + .form__label-text::after {
     background-image: url("../../img/icon-checkbox.svg");
     background-repeat: no-repeat;
     background-position: 2px 3px;
     background-size: 12px;
   }
 
-  &:hover + .form__check-box {
+  &:hover + .form__label-text::after {
     opacity: 0.7;
   }
 
-  &:active + .form__check-box {
+  &:active + .form__label-text::after {
     opacity: 1;
   }
 
-  &:focus + .form__check-box {
+  &:focus + .form__label-text::after {
     outline: auto 5px -webkit-focus-ring-color;
   }
-}
-
-.form__check-box {
-  position: absolute;
-  display: block;
-  width: 17px;
-  height: 16px;
-
-  background-color: $blue;
-  border: 1px solid $white;
-
-  cursor: pointer;
 }
 
 .form__label-text--modal {

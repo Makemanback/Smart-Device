@@ -3,9 +3,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url("../../img/header-background.png");
+  background-image: url("../../img/header-mask.png"), url("../../img/header-waves.png"), url("../../img/header-background.png");
+  background-position: -330px 0, center center, center center;
   color: $white;
-  overflow: hidden;
 }
 
 .header__button {
