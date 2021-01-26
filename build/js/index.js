@@ -72,6 +72,7 @@
 
   };
 
+  sectionsButton.addEventListener('click', openMenu);
   sectionsOpenIcon.addEventListener('click', openMenu);
   sectionsCloseIcon.addEventListener('click', openMenu);
   section.addEventListener('click', openMenu);
@@ -108,6 +109,7 @@
 
   };
 
+  addressButton.addEventListener('click', openAddress);
   addressOpenIcon.addEventListener('click', openAddress);
   addressCloseIcon.addEventListener('click', openAddress);
   addressSection.addEventListener('click', openAddress);
@@ -220,11 +222,11 @@
   var disableTab = function () {
     if (window.innerWidth >= tabletWidth) {
 
-      footerButtons.forEach(function(button) {
+      footerButtons.forEach(function (button) {
         button.setAttribute('tabindex', '-1');
       });
     } else {
-      footerButtons.forEach(function(button) {
+      footerButtons.forEach(function (button) {
         button.setAttribute('tabindex', '0');
       });
     }
