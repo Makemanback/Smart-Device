@@ -148,12 +148,14 @@
   var closePopup = function (evt) {
     if (evt.target === modal || evt.target === modalClose || evt.target === modalCloseImg) {
       modal.classList.add('visually-hidden');
+      document.body.style.overflow = 'visible';
       document.removeEventListener('keydown', closeEscModal);
     }
   };
 
   var sendForm = function () {
     modal.classList.add('visually-hidden');
+    document.body.style.overflow = 'visible';
     document.removeEventListener('keydown', closeEscModal);
   };
 
@@ -192,13 +194,11 @@
   scrollFeedback.addEventListener('click', function (evt) {
     evt.preventDefault();
     scroll(feedback);
-});
+  });
 
-
-var tels = document.querySelectorAll('input[type="tel"]');
-
-var im = new Inputmask({ mask: ["+7-999-999-99-99"], keepStatic: true });
-
-
-im.mask(tels);
+  var tels = document.querySelectorAll('input[type="tel"]');
+  /*eslint-disable*/
+  var im = new Inputmask({mask: ['+7-999-999-99-99'], keepStatic: true});
+  /*eslint-disable*/
+  im.mask(tels);
 })();
