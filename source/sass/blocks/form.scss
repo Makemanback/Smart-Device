@@ -13,69 +13,70 @@
   @media (min-width: $desktop-width) {
     width: 570px;
   }
-}
 
-.form input {
-  width: 290px;
-  height: 52px;
-  margin-bottom: 30px;
-  padding: 15px 17px;
+  input {
+    width: 290px;
+    height: 52px;
+    margin-bottom: 30px;
+    padding: 15px 17px;
 
-  border: none;
-  color: $white;
-  background-color: #19baff;
-
-  &::placeholder {
+    border: none;
+    border-radius: 0;
     color: $white;
-  }
-
-  &:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-  }
-
-  &:active {
     background-color: #19baff;
+
+    &::placeholder {
+      color: $white;
+    }
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    &:active {
+      background-color: #19baff;
+    }
+
+    @media (min-width: $tablet-width) {
+      width: 280px;
+      margin-bottom: 42px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 270px;
+    }
   }
 
-  @media (min-width: $tablet-width) {
-    width: 280px;
-    margin-bottom: 42px;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 270px;
-  }
-}
-
-.form textarea {
-  width: 290px;
-  height: 104px;
-  margin-bottom: 30px;
-  padding: 13px 17px;
-  border: none;
-  background-color: #19baff;
-  resize: none;
-
-  &::placeholder {
-    color: $white;
-  }
-
-  &:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-  }
-
-  &:active {
+  textarea {
+    width: 290px;
+    height: 104px;
+    margin-bottom: 30px;
+    padding: 13px 17px;
+    border: none;
     background-color: #19baff;
-  }
+    resize: none;
 
-  @media (min-width: $tablet-width) {
-    width: 590px;
-    height: 160px;
-    margin-bottom: 45px;
-  }
+    &::placeholder {
+      color: $white;
+    }
 
-  @media (min-width: $desktop-width) {
-    width: 570px;
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    &:active {
+      background-color: #19baff;
+    }
+
+    @media (min-width: $tablet-width) {
+      width: 590px;
+      height: 160px;
+      margin-bottom: 45px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 570px;
+    }
   }
 }
 

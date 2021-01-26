@@ -8,7 +8,7 @@
     if (window.innerWidth >= tabletWidth) {
       order.textContent = 'получить бесплатную консультацию';
     } else {
-      order.textContent = 'получить консультацию';
+      order.textContent = 'бесплатная консультация';
     }
   };
 
@@ -31,11 +31,17 @@
   window.addEventListener('resize', hideProtected);
 
   // конпки открытия закрытия меню
+  var section = document.querySelector('.sections');
   var sectionsButton = document.querySelector('.sections__button');
   var sectionsOpenIcon = document.querySelector('.open-image');
   var sectionsCloseIcon = document.querySelector('.close-image');
-
   var sections = document.querySelector('.sections__block-wrapper');
+
+  var addressSection = document.querySelector('.address');
+  var addressButton = document.querySelector('.address__button');
+  var addressOpenIcon = document.querySelector('.open-image-address');
+  var addressCloseIcon = document.querySelector('.close-image-address');
+  var address = document.querySelector('.address__block');
 
   var hideSections = function () {
     if (window.innerWidth < tabletWidth) {
@@ -57,17 +63,21 @@
     sections.classList.toggle('visually-hidden');
     sectionsOpenIcon.classList.toggle('visually-hidden');
     sectionsCloseIcon.classList.toggle('visually-hidden');
+
+    if (!address.classList.contains('visually-hidden')) {
+      address.classList.add('visually-hidden');
+      addressOpenIcon.classList.toggle('visually-hidden');
+      addressCloseIcon.classList.toggle('visually-hidden');
+    }
+
   };
 
   sectionsOpenIcon.addEventListener('click', openMenu);
   sectionsCloseIcon.addEventListener('click', openMenu);
+  section.addEventListener('click', openMenu);
 
   // кнопки открытия закрытия адреса
-  var addressButton = document.querySelector('.address__button');
-  var addressOpenIcon = document.querySelector('.open-image-address');
-  var addressCloseIcon = document.querySelector('.close-image-address');
 
-  var address = document.querySelector('.address__block');
 
   var hideAddress = function () {
     if (window.innerWidth < tabletWidth) {
@@ -89,11 +99,18 @@
     address.classList.toggle('visually-hidden');
     addressOpenIcon.classList.toggle('visually-hidden');
     addressCloseIcon.classList.toggle('visually-hidden');
+
+    if (!sections.classList.contains('visually-hidden')) {
+      sections.classList.add('visually-hidden');
+      sectionsOpenIcon.classList.toggle('visually-hidden');
+      sectionsCloseIcon.classList.toggle('visually-hidden');
+    }
+
   };
 
   addressOpenIcon.addEventListener('click', openAddress);
   addressCloseIcon.addEventListener('click', openAddress);
-
+  addressSection.addEventListener('click', openAddress);
   // модальное окно
 
   var modalClose = document.querySelector('.modal__close');
@@ -129,7 +146,8 @@
     }
   };
 
-  var openPopup = function () {
+  var openPopup = function (evt) {
+    evt.preventDefault();
     modal.classList.remove('visually-hidden');
     document.body.style.overflow = 'hidden';
 
@@ -196,9 +214,28 @@
     scroll(feedback);
   });
 
-  var tels = document.querySelectorAll('input[type="tel"]');
-  Inputmask({"mask": '+7-999-999-99-99'}).mask(tels);
-  // var im = new Inputmask({mask: ['+7-999-999-99-99'], keepStatic: true});
+  // табиндексы в футере
+  var footerButtons = document.querySelectorAll('.open-button');
 
-  // im.mask(tels);
+  var disableTab = function () {
+    if (window.innerWidth >= tabletWidth) {
+
+      footerButtons.forEach(function(button) {
+        button.setAttribute('tabindex', '-1');
+      });
+    } else {
+      footerButtons.forEach(function(button) {
+        button.setAttribute('tabindex', '0');
+      });
+    }
+  };
+
+  window.addEventListener('resize', disableTab);
+
+  // маски
+  var tels = document.querySelectorAll('input[type="tel"]');
+  /*eslint-disable*/
+  var im = new Inputmask({mask: ['+7-999-999-99-99'], keepStatic: true});
+  /*eslint-disable*/
+  im.mask(tels);
 })();

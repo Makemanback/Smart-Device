@@ -1,16 +1,20 @@
-.title h2 {
-  margin: 0;
-  font-family: "Roboto Condensed", "Arial", sans-serif;
-  font-size: 25px;
-  font-weight: 700;
-  line-height: 29px;
-  text-align: left;
-}
+.title {
+  color: $white;
 
-.title span {
-  font-family: "Roboto", sans-serif;
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 14px;
-  text-align: left;
+  h2 {
+    margin: 0;
+    font-family: "Roboto Condensed", "Arial", sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 29px;
+    text-align: left;
+  }
+
+  span {
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14px;
+    text-align: left;
+  }
 }

@@ -62,6 +62,10 @@
 }
 
 .about__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   width: 180px;
   border: 1px solid $blue;
 

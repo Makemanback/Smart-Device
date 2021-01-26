@@ -56,7 +56,7 @@
 
   @media (min-width: $desktop-width) {
     flex-direction: row;
-    align-items: flex-start;
+    justify-content: space-between;
   }
 }
 
@@ -73,6 +73,7 @@
 
   @media (min-width: $desktop-width) {
     width: 370px;
+    max-width: 30%;
     height: 620px;
   }
 }
@@ -80,7 +81,7 @@
 .products__link {
   position: relative;
   display: block;
-  width: inherit;
+  width: auto;
   height: inherit;
   padding-top: 23px;
   padding-left: 35px;

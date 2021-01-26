@@ -8,73 +8,74 @@
   @media (min-width: $desktop-width) {
     margin-right: 71px;
   }
-}
 
-.order h2 {
-  margin: 0;
-  margin-top: 194px;
-  margin-bottom: 30px;
+  h2 {
+    margin: 0;
+    margin-top: 183px;
+    margin-left: 5px;
+    margin-bottom: 28px;
 
-  font-family: "Roboto Condensed", "Arial", sans-serif;
-  font-size: 40px;
-  line-height: 47px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 3px;
+    font-family: "Roboto Condensed", "Arial", sans-serif;
+    font-size: 40px;
+    line-height: 47px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
 
-  @media (min-width: $tablet-width) {
-    width: 470px;
-    margin-top: 58px;
-    margin-bottom: 32px;
-    font-size: 60px;
-    line-height: 70px;
-    letter-spacing: 0;
+    @media (min-width: $tablet-width) {
+      width: 470px;
+      margin-top: 58px;
+      margin-bottom: 32px;
+      font-size: 60px;
+      line-height: 70px;
+      letter-spacing: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: auto;
+      font-size: 80px;
+      line-height: 94px;
+    }
   }
 
-  @media (min-width: $desktop-width) {
-    width: auto;
-    font-size: 80px;
-    line-height: 94px;
-  }
-}
+  span {
+    position: relative;
+    margin-left: 56px;
+    margin-bottom: 39px;
 
-.order span {
-  position: relative;
-  margin-left: 48px;
-  margin-bottom: 42px;
-
-  font-size: 16px;
-  line-height: 25px;
-
-  &::before {
-    position: absolute;
-    display: block;
-    top: 13px;
-    left: -43px;
-    content: "";
-    width: 33px;
-    height: 2px;
-    background-color: $white;
-  }
-
-  @media (min-width: $tablet-width) {
-    width: 356px;
-    margin-bottom: 37px;
-
-    font-size: 18px;
-    line-height: 28px;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: auto;
-    margin-left: 94px;
-    font-size: 22px;
-    line-height: 35px;
+    font-size: 16px;
+    line-height: 25px;
 
     &::before {
-      top: 15px;
-      left: -85px;
-      width: 66px;
+      position: absolute;
+      display: block;
+      top: 14px;
+      left: -48px;
+      content: "";
+      width: 33px;
+      height: 2px;
+      background-color: $white;
+    }
+
+    @media (min-width: $tablet-width) {
+      width: 356px;
+      margin-bottom: 37px;
+
+      font-size: 18px;
+      line-height: 28px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: auto;
+      margin-left: 94px;
+      font-size: 22px;
+      line-height: 35px;
+
+      &::before {
+        top: 15px;
+        left: -85px;
+        width: 66px;
+      }
     }
   }
 }
@@ -82,7 +83,9 @@
 .order-button {
   width: 287px;
   height: 55px;
+  margin-left: 8px;
   font-size: 16px;
+  letter-spacing: 0.8px;
   background-color: $blue;
   border-color: $blue;
   cursor: pointer;
