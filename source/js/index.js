@@ -1,11 +1,15 @@
 'use strict';
 
 (function () {
+  var ESC_BUTTON = 'Escape';
+  var WindowWidths = {
+    tablet: 768,
+    desktop: 1024
+  };
   var order = document.querySelector('.order-button');
-  var tabletWidth = 768;
 
   var changeOrder = function () {
-    if (window.innerWidth >= tabletWidth) {
+    if (window.innerWidth >= WindowWidths.tablet) {
       order.textContent = 'получить бесплатную консультацию';
     } else {
       order.textContent = 'бесплатная консультация';
@@ -17,10 +21,9 @@
   window.addEventListener('resize', changeOrder);
 
   var protect = document.querySelector('.protected');
-  var desktopWidth = 1024;
 
   var hideProtected = function () {
-    if (window.innerWidth < desktopWidth) {
+    if (window.innerWidth < WindowWidths.desktop) {
       protect.classList.add('visually-hidden');
     } else {
       protect.classList.remove('visually-hidden');
@@ -44,7 +47,7 @@
   var address = document.querySelector('.address__block');
 
   var hideSections = function () {
-    if (window.innerWidth < tabletWidth) {
+    if (window.innerWidth < WindowWidths.tablet) {
       sections.classList.add('visually-hidden');
       sectionsButton.classList.remove('visually-hidden');
     } else {
@@ -81,7 +84,7 @@
 
 
   var hideAddress = function () {
-    if (window.innerWidth < tabletWidth) {
+    if (window.innerWidth < WindowWidths.tablet) {
       address.classList.add('visually-hidden');
       addressButton.classList.remove('visually-hidden');
     } else {
@@ -138,10 +141,8 @@
     isStorageSupport = false;
   }
 
-  var escButton = 'Escape';
-
   var closeEscModal = function (evt) {
-    if (evt.key === escButton) {
+    if (evt.key === ESC_BUTTON) {
       evt.preventDefault();
       document.body.style.overflow = 'visible';
       modal.classList.add('visually-hidden');
@@ -220,7 +221,7 @@
   var footerButtons = document.querySelectorAll('.open-button');
 
   var disableTab = function () {
-    if (window.innerWidth >= tabletWidth) {
+    if (window.innerWidth >= WindowWidths.tablet) {
 
       footerButtons.forEach(function (button) {
         button.setAttribute('tabindex', '-1');
