@@ -4,8 +4,12 @@
   flex-direction: column;
   align-items: center;
   background-image: url("../img/header-mask.png"), url("../img/header-waves.png"), url("../img/header-background.png");
-  background-position: -330px 0, center center, center center;
+  background-position: 0 0, center center, center center;
   color: $white;
+
+  @media (min-width: $desktop-width) {
+    overflow: hidden;
+  }
 }
 
 .header__button {
@@ -14,8 +18,8 @@
   @media (min-width: $desktop-width) {
     position: relative;
     display: block;
-    bottom: 130px;
-    left: -30px;
+    bottom: 129px;
+    left: -37px;
     width: 110px;
     background-color: transparent;
     border: none;
@@ -27,6 +31,7 @@
     font-size: 14px;
     line-height: 16px;
     opacity: 0.5;
+    z-index: 3;
 
     cursor: pointer;
 
@@ -49,8 +54,10 @@
   overflow: hidden;
 
   @media (min-width: $desktop-width) {
-    min-width: unset;
-    max-width: 100%;
+    min-width: 1024px;
+    width: 100%;
+    max-width: 1434px;
+    overflow: visible;
   }
 }
 
@@ -88,6 +95,10 @@
   @media (min-width: $tablet-width) {
     display: block;
     margin-top: 6px;
+
+    span {
+      color: #788891;
+    }
   }
 }
 
@@ -209,7 +220,8 @@
 
   @media (min-width: $desktop-width) {
     max-width: 1494px;
-    margin-bottom: 108px;
+    margin-bottom: 257px;
+    overflow: visible;
   }
 }
 
@@ -222,16 +234,16 @@
   height: 220px;
 
   @media (min-width: $tablet-width) {
-    left: 55%;
     width: 465px;
     height: 340px;
+    left: 500px;
+    top: -2px;
   }
 
   @media (min-width: $desktop-width) {
-    position: static;
     min-width: 705px;
     height: 515px;
-    top: 0;
-    right: 5%;
+    top: -4px;
+    left: 785px;
   }
 }

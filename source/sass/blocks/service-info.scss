@@ -21,13 +21,15 @@
   display: flex;
   justify-content: center;
   width: 100%;
+  letter-spacing: 0.5px;
 
   @media (max-width: 767px) {
-    top: 120px;
+    top: 124px;
   }
 
   @media (min-width: $tablet-width) and (max-width: 1023px) {
     top: 35px;
+    left: 59px;
   }
 
   @media (min-width: $desktop-width) {
@@ -49,6 +51,10 @@
     height: 123px;
     padding-top: 28px;
     padding-bottom: 26px;
+  }
+
+  @media (min-width: $tablet-width) {
+    letter-spacing: 0.7px;
   }
 
   @media (min-width: $desktop-width) {

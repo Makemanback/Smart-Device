@@ -21,18 +21,21 @@
     background-image: url("../img/2005.png");
     background-repeat: no-repeat;
     background-size: contain;
+    background-position: 3px 3px;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     max-width: 1200px;
-
     margin-bottom: 110px;
+    padding-left: 196px;
+    padding-right: 24px;
+    background-position: -5px 7px;
   }
 }
 
 .about__container h2 {
   margin: 0;
-  margin-bottom: 19px;
+  margin-bottom: 21px;
 
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-size: 28px;
@@ -40,7 +43,7 @@
   font-weight: 400;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 23px;
+    margin-bottom: 29px;
 
     font-size: 32px;
     line-height: 45px;
@@ -56,9 +59,27 @@
 
 .about__container p {
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 47px;
 
   line-height: 21px;
+
+  @media (min-width: $tablet-width) {
+    &:first-of-type {
+      margin-bottom: 24px;
+
+      @media (min-width: $tablet-width) {
+        margin-bottom: 27px;
+      }
+    }
+
+    &:last-of-type {
+      margin-bottom: 56px;
+
+      @media (min-width: $tablet-width) {
+        margin-bottom: 53px;
+      }
+    }
+  }
 }
 
 .about__button {
@@ -67,6 +88,8 @@
   justify-content: center;
 
   width: 180px;
+  margin-top: -13px;
+  margin-left: 2px;
   border: 1px solid $blue;
 
   color: $blue;
@@ -80,5 +103,14 @@
 
   &:active {
     opacity: 0.7;
+  }
+}
+
+.about__additional {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: inline;
+    line-height: 21px;
   }
 }

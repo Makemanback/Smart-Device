@@ -12,19 +12,21 @@
   border-left: 2px solid $blue;
 
   @media (min-width: $tablet-width) {
-    width: 49%;
+    width: 345px;
     margin-bottom: 30px;
     padding-top: 24px;
     padding-right: 21px;
-    padding-bottom: 34px;
+    padding-bottom: 25px;
     padding-left: 27px;
   }
 
   @media (min-width: $desktop-width) {
+    width: 49%;
     max-width: 570px;
+    min-height: 299px;
     padding-top: 40px;
     padding-right: 43px;
-    padding-bottom: 49px;
+    padding-bottom: 68px;
     padding-left: 45px;
     border-left-width: 3px;
   }
@@ -54,9 +56,12 @@
   color: $blue;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 20px;
     font-size: 24px;
     line-height: 34px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 17px;
   }
 }
 
@@ -71,7 +76,12 @@
   margin-bottom: 14px;
   fill: $blue;
 
+  @media (min-width: $tablet-width) {
+    margin-left: -4px;
+    margin-bottom: 7px;
+  }
+
   @media (min-width: $desktop-width) {
-    margin-bottom: 23px;
+    margin-bottom: 21px;
   }
 }
