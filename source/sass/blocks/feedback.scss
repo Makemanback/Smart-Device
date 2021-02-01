@@ -6,7 +6,7 @@
   background-color: $blue;
   overflow-x: hidden;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     background-image: url("../img/header-mask.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -15,13 +15,13 @@
 }
 
 .feedback__container {
+  position: relative;
   display: flex;
   flex-direction: column;
   margin-right: 15px;
   margin-left: 15px;
   margin-top: 31px;
   margin-bottom: 42px;
-
   color: $white;
 
   @media (min-width: $tablet-width) {
@@ -42,12 +42,29 @@
     margin-right: 0;
     margin-left: 0;
     margin-bottom: 111px;
-    background-image: url("../img/feedback-plane.png");
-    background-size: 511px 288px;
-    background-repeat: no-repeat;
-    background-position: -10px 72px;
 
     overflow: visible;
+  }
+
+  img {
+    display: none;
+
+    @media (min-width: $desktop-width) {
+      position: absolute;
+      display: block;
+      width: 511px;
+      height: 288px;
+      top: 72px;
+      left: -10px;
+    }
+  }
+}
+
+.feedback__wrapper {
+  @media (min-width: $desktop-width) {
+    position: relative;
+    background-color: $blue;
+    z-index: 3;
   }
 }
 

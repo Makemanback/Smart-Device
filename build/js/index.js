@@ -6,6 +6,20 @@
     tablet: 768,
     desktop: 1024
   };
+
+  // маски
+  var tels = document.querySelectorAll('input[type="tel"]');
+  /*eslint-disable*/
+  var im = new Inputmask({
+    mask: ['+7-999-999-99-99'],
+    clearIncomplete: true
+  }
+  );
+
+  /*eslint-disable*/
+  im.mask(tels);
+
+  // console.log(tels[0].inputmask.maskset.tests)
   var order = document.querySelector('.order-button');
 
   var changeOrder = function () {
@@ -183,7 +197,6 @@
   var submitForm = function (evt) {
     evt.preventDefault();
     sendForm();
-
     if (isStorageSupport) {
       localStorage.setItem('username', nameInput.value);
       localStorage.setItem('phone', phoneInput.value);
@@ -235,10 +248,4 @@
 
   window.addEventListener('resize', disableTab);
 
-  // маски
-  var tels = document.querySelectorAll('input[type="tel"]');
-  /*eslint-disable*/
-  var im = new Inputmask({mask: ['+7-999-999-99-99'], keepStatic: true});
-  /*eslint-disable*/
-  im.mask(tels);
 })();

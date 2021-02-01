@@ -67,10 +67,11 @@
 }
 
 .products__item {
-  width: 290px;
+  width: 100%;
   height: 256px;
 
   margin-bottom: 30px;
+  background-size: cover;
 
   @media (min-width: $tablet-width) {
     width: 715px;
@@ -80,7 +81,7 @@
 
   @media (min-width: $desktop-width) {
     width: 370px;
-    max-width: 31.3%;
+    max-width: 31.2%;
     height: 620px;
   }
 }

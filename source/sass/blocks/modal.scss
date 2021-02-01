@@ -71,7 +71,7 @@
 
 .modal__close {
   position: relative;
-  top: -168px;
+  top: -576px;
   left: 266px;
   width: 17px;
   height: 17px;
@@ -94,7 +94,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    top: -149px;
+    top: -620px;
     left: 416px;
   }
 }
@@ -108,6 +108,7 @@
 .modal__form textarea {
   @media (min-width: $tablet-width) {
     width: 410px;
+    max-width: 410px;
     margin-bottom: 30px;
   }
 }
