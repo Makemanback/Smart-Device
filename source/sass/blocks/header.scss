@@ -90,6 +90,7 @@
   height: 38px;
   overflow: hidden;
 
+
   @media (min-width: $tablet-width) {
     min-width: 202px;
     height: 52px;
@@ -102,6 +103,7 @@
 
   svg {
     fill: $white;
+    cursor: default;
   }
 }
 
@@ -126,6 +128,8 @@
 
   @media (min-width: $desktop-width) {
     position: relative;
+    flex-wrap: nowrap;
+    align-items: flex-start;
 
     a {
       height: 100%;
@@ -218,6 +222,8 @@
     justify-content: center;
     align-items: center;
     width: 180px;
+    min-width: 180px;
+    max-height: 52px;
     border-color: $white;
 
     cursor: pointer;
@@ -273,5 +279,19 @@
     height: 515px;
     top: -4px;
     left: 785px;
+  }
+}
+
+.header__list {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__list-item {
+  @media (min-width: $desktop-width) {
+    height: 50px;
   }
 }

@@ -19,27 +19,32 @@
     <div class="header__container">
       <div class="header__wrapper">
         <div class="header__logo-wrapper">
-            <a class="logo">
+            <span class="logo">
               <svg width="38" height="38">
                 <use xlink:href="img/sprite_auto.svg#icon-logo-full"></use>
               </svg>
-            </a>
+            </span>
         </div>
 
         <div class="header__contacts-wrapper">
-
-          <a href="mailto:info@sd.ru" class="header__mail" aria-labelledby="почта для писем">
-            <svg class="header__mail-icon" width="25" height="19">
-              <use xlink:href="img/sprite_auto.svg#icon-mail"></use>
-            </svg>
-            <span>info@sd.ru</span>
-          </a>
-          <a href="tel:+74950005252" class="header__phone" aria-labelledby="номер для звонков">
-            <svg class="header__phone-icon" width="24" height="24">
-              <use xlink:href="img/sprite_auto.svg#icon-phone"></use>
-            </svg>
-            <span>+7 (495) 000 52 52</span>
-          </a>
+          <ul class="header__list">
+            <li class="header__list-item">
+              <a href="mailto:info@sd.ru" class="header__mail" aria-label="почта для писем">
+                <svg class="header__mail-icon" width="25" height="19">
+                  <use xlink:href="img/sprite_auto.svg#icon-mail"></use>
+                </svg>
+                <span>info@sd.ru</span>
+              </a>
+            </li>
+            <li class="header__list-item">
+              <a href="tel:+74950005252" class="header__phone" aria-label="номер для звонков">
+                <svg class="header__phone-icon" width="24" height="24">
+                  <use xlink:href="img/sprite_auto.svg#icon-phone"></use>
+                </svg>
+                <span>+7 (495) 000 52 52</span>
+              </a>
+            </li>
+          </ul>
           <a href="popup.html" class="button header__phone-button">Заказать звонок</a>
         </div>
       </div>
@@ -65,14 +70,17 @@
         <h3>Закажите звонок</h3>
         <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
         <form action="#" class="modal__form form">
-          <label for="name" class="form__name">
-            <input id="name" name="username" type="text"  placeholder="Имя" required>
+          <label class="form__name">
+            <span class="visually-hidden">Имя</span>
+            <input name="username" type="text"  placeholder="Имя" required>
           </label>
-          <label for="phone" class="form__tel">
-            <input id="phone" class="tel" name="phone" type="tel" placeholder="Телефон" required>
+          <label class="form__tel">
+            <span class="visually-hidden">Телефон</span>
+            <input class="tel" name="phone" type="tel" placeholder="Телефон" required>
           </label>
-          <label for="message" class="form__textarea">
-            <textarea id="message" name="message" placeholder="Ваш вопрос"></textarea>
+          <label class="form__textarea">
+            <span class="visually-hidden">Ваш вопрос</span>
+            <textarea name="message" placeholder="Ваш вопрос"></textarea>
           </label>
           <button type="submit" class="button form__button">Отправить</button>
           <label class="form__label">
@@ -166,14 +174,17 @@
           <h3>Остались вопросы? Задайте их нам!</h3>
           <p>Мы проконсультируем Вас бесплатно</p>
           <form action="#" class="feedback__form form">
-            <label for="feedback__name" class="form__name">
-              <input id="feedback__name" type="text" placeholder="Имя" required>
+            <label class="form__name">
+              <span class="visually-hidden">Имя</span>
+              <input type="text" placeholder="Имя" required>
             </label>
-            <label for="feedback__tel" class="form__tel">
-              <input id="feedback__tel" type="tel" placeholder="Телефон" required>
+            <label class="form__tel">
+              <span class="visually-hidden">Телефон</span>
+              <input type="tel" placeholder="Телефон" required>
             </label>
-            <label for="feedback__textarea" class="form__textarea">
-              <textarea id="feedback__textarea" name="question" placeholder="Ваш вопрос"></textarea>
+            <label class="form__textarea">
+              <span class="visually-hidden">Ваш вопрос</span>
+              <textarea name="question" placeholder="Ваш вопрос"></textarea>
             </label>
             <button type="submit" class="button form__button">Задать вопрос</button>
             <label class="form__label">
@@ -192,6 +203,7 @@
         <div class="footer__contacts">
           <div class="footer__title-container">
             <a href="index.html" class="logo">
+              <span class="visually-hidden">Ссылка на главную</span>
               <svg width="52" height="52">
                 <use xlink:href="img/sprite_auto.svg#icon-logo-full"></use>
               </svg>
